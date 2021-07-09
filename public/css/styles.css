@@ -1,0 +1,72 @@
+header nav ul {
+    list-style-type: none;
+    display: inline-flex;
+}
+
+header nav ul li {
+    border: 1px solid #3490dc;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin-right: 10px;
+}
+
+header nav ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: #3490dc;
+    text-decoration: underline;
+}
+
+.content-wrapper {
+    margin: 20px 30px;
+    width: 800px;
+}
+
+header h1 {
+    padding: 10px 150px;
+}
+
+.content-wrapper .form-group {
+    margin: 10px 0;
+}
+
+.content-wrapper .control-label {
+    display: inline-block;
+    min-width: 150px;
+    font-size: 16px;
+    text-align: right;
+    padding: 0px 15px;
+}
+
+.content-wrapper .control-input {
+    display: inline-block;
+    min-width: 150px;
+    font-size: 16px;
+    padding: 5px 15px;
+}
+
+.content-wrapper .button-form {
+    margin: 10px 0;
+    width: 77%;
+    text-align: right;
+}
+
+.content-wrapper .button-form button {
+    font-size: 16px;
+    padding: 10px 20px;
+    width: 200px;
+}
+
+.content-wrapper .response-message,
+.content-wrapper .error-message {
+    font-size: 16px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.content-wrapper .error-message {
+    color: #ff0000;
+}
