@@ -21,6 +21,9 @@ services:
       - .:/app
       - ./.dev/php/php.ini:/etc/php/7.4/fpm/php.ini
       - ./.dev/php/php.ini:/etc/php/7.4/cli/php.ini
+    environment:
+      XDEBUG_CONFIG: "remote_host=host.docker.internal remote_enable=1"
+      PHP_IDE_CONFIG: "serverName=Docker"
     networks:
       - default
       - mysql
