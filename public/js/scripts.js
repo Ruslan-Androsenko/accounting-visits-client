@@ -56,4 +56,21 @@ $(function (){
             });
         }
     });
+
+    $("#create_fixing").submit(function (e){
+        e.preventDefault();
+
+        $.ajax({
+            method: "POST",
+            url: "/visit/",
+            dataType: "json",
+            data: $(this).serialize()
+        }).done(function (response) {
+            if (response.success) {
+                $(".response-message").html(response.message);
+            } else {
+                $(".error-message").html(response.message);
+            }
+        });
+    });
 });

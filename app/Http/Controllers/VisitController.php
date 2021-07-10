@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 
 class VisitController extends Controller
@@ -14,7 +15,9 @@ class VisitController extends Controller
      */
     public function index()
     {
-        //
+        $response = Http::get(env("APP_API_URL") . "/visit/");
+
+        return view("visit.list", ["visits" => $response->json() ?? []]);
     }
 
     /**
@@ -24,7 +27,13 @@ class VisitController extends Controller
      */
     public function create()
     {
-        //
+        $response = Http::get(env("APP_API_URL") . "/employee/");
+
+        return view("visit.fixing", [
+            "title" => "Внести посещение сотрудника",
+            "formId" => "create_fixing",
+            "employees" => $response->json() ?? [],
+        ]);
     }
 
     /**
@@ -35,7 +44,11 @@ class VisitController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $response = Http::post(env("APP_API_URL") . "/visit/", [
+            "Visit" => $request->Visit ?? [],
+        ]);
+
+        return response($response->json() ?? []);
     }
 
     /**

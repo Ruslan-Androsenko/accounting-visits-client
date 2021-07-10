@@ -19,6 +19,8 @@
                 <ul>
                     <li><a href="/employee/">Список сотрудников</a></li>
                     <li><a href="/employee/create/">Создать сотрудника</a></li>
+                    <li><a href="/visit/">Список табелей посещения</a></li>
+                    <li><a href="/visit/create/">Внести данные о посещении</a></li>
                 </ul>
             </nav>
         </header>
