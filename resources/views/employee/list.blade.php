@@ -23,8 +23,12 @@
                         <td>{{ $employee["phone"] }}</td>
                         <td>{{ $employee["personnel_number"] }}</td>
                         <td>
-                            <a class="edit" href="/employee/{{ $employee["id"] }}/edit/">Редактировать</a> /
-                            <a class="delete" href="#" data-id="{{ $employee["id"] }}">Удалить</a>
+                            <a class="edit" href="/employee/{{ $employee["id"] }}/edit/" title="Редактировать">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </a>
+                            <a class="delete" href="#" data-id="{{ $employee["id"] }}" title="Удалить">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </a>
                         </td>
                     </tr>
                 @endforeach

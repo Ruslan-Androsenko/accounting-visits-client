@@ -4,7 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="stylesheet" href="{{ url('/css/font-awesome.min.css') }}" />
         <link rel="stylesheet" href="{{ url('/css/styles.css') }}" />
+
         <script src="{{ url('/js/jquery.js') }}"></script>
         <script src="{{ url('/js/jquery.maskedinput.min.js') }}"></script>
         <script src="{{ url('/js/scripts.js') }}"></script>

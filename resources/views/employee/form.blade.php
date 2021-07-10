@@ -32,7 +32,10 @@
             </div>
 
             <div class="button-form">
-                <button type="submit">Сохранить</button>
+                <button type="submit">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                    <span>Сохранить</span>
+                </button>
             </div>
         </form>
 
