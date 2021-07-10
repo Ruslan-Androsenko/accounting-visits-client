@@ -115,3 +115,15 @@ header h1 {
     padding: 8px;
     width: 160px;
 }
+
+.content-wrapper .filter-sorting-wrapper {
+    width: 600px;
+    margin: 10px 5px 40px;
+    padding: 15px;
+    border: 1px solid #3490dc;
+    border-radius: 5px;
+}
+
+.content-wrapper .filter-sorting-wrapper .button-form {
+    text-align: left;
+}

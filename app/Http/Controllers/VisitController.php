@@ -13,11 +13,28 @@ class VisitController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $response = Http::get(env("APP_API_URL") . "/visit/");
+        $params = [
+            "filterDate" => "",
+            "filterEmployee" => "",
+            "orderByDate" => "",
+        ];
 
-        return view("visit.list", ["visits" => $response->json() ?? []]);
+        foreach ($request->all() as $key => $value) {
+            if (!empty($value)) {
+                $params[$key] = $value;
+            }
+        }
+
+        $responseVisits = Http::get(env("APP_API_URL") . "/visit/", $params);
+        $responseEmployees = Http::get(env("APP_API_URL") . "/employee/");
+
+        return view("visit.list", [
+            "visits" => $responseVisits->json() ?? [],
+            "employees" => $responseEmployees->json() ?? [],
+            "queries" => $params,
+        ]);
     }
 
     /**
